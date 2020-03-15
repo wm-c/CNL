@@ -1,6 +1,8 @@
 import math
 import cmath
 
+
+
 # Returns the Midpoint of a line, assuming one points is 0,0
 def midpoint1(x1,y1):
     x = x1 / 2
@@ -36,6 +38,14 @@ def distance(x1, y1, x2, y2):
 def distance2(x1, y1, x2, y2):
     return math.hypot(x2 - x1, y2 - y1)
 
+# Returns a rational number of dividing two complex numbers
+def complexDivide(numerator, denominator):
+    DenomConjugate = denominator.conjugate()
+    denominator *= DenomConjugate
+    numerator *= DenomConjugate
 
+    return numerator, denominator
+
+print(complexDivide(complex(-6, 8), complex(-4, -3)))
 
 
