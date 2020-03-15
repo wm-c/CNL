@@ -23,3 +23,7 @@ import cnl
 
 ## TODO
 I would like to add the ability to tell if a number is prime and reduce radicals
+
+## Contributors
+* William Meathrel
+* Evan Pratten
