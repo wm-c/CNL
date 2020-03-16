@@ -1,3 +1,7 @@
+import math
+import cmath
+from cnl import vector
+
 def midpoint1(x1: float, y1: float) -> complex:
     """ Returns the Midpoint of a line, assuming one points is 0,0"""
 
@@ -30,7 +34,7 @@ def expI(exponent: float) -> complex:
         return complex(0, -1)
 
 
-def distance(x1: float, y1: float, x2: float, y2: float) -> complex:
+def distance(x1: float, y1: float, x2: float, y2: float) -> float:
     """Returns an unsquared distance between to points"""
     return ((x2 - x1) ** 2) + ((y2 - y1) ** 2)
 
@@ -38,6 +42,14 @@ def distance(x1: float, y1: float, x2: float, y2: float) -> complex:
 def distance2(x1: float, y1: float, x2: float, y2: float) -> float:
     """Returns the distance between to points"""
     return math.hypot(x2 - x1, y2 - y1)
+
+def absDistance(x1: float, y1: float, x2: float, y2: float) -> float:
+    """Returns the unsquared absolute distance between to points"""
+    return abs(distance(x1, y1, x2, y2))
+
+def absDistance2(x1: float, y1: float, x2: float, y2: float) -> float:
+    """Returns the absolute distance between to points"""
+    return abs(distance2(x1, y1, x2, y2))
 
 
 def complexDivide(numerator: float, denominator: float) -> (float, float):
@@ -47,5 +59,3 @@ def complexDivide(numerator: float, denominator: float) -> (float, float):
     numerator *= DenomConjugate
 
     return numerator, denominator
-
-
